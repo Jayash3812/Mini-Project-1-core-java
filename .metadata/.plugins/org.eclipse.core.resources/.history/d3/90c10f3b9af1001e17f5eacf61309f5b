@@ -1,0 +1,40 @@
+package com.main;
+
+import java.util.Scanner;
+
+import com.interfaces.Methods;
+
+public class Main implements Methods{
+
+	@Override
+	public int getSum(int num1, int num2) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter your first number");
+		num1 = scan.nextInt();
+		
+		System.out.println("Enter your second number");
+		num2 = scan.nextInt();
+		
+		int value = num1 + num2;
+		System.out.println("Addtion of two numbers is: ");
+		return value;	
+	}
+	
+	public static void main(String[] args) {
+		
+		int choiceNum = 0;
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Welcome to console based application");
+		
+		switch(choiceNum) {
+		case 1: 
+			
+		}
+	}
+
+	
+
+}

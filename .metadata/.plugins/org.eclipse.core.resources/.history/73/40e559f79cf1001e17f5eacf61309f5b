@@ -1,0 +1,7 @@
+package com.interfaces;
+
+public interface Methods {
+
+	int getSum(int num1, int num2);
+
+}

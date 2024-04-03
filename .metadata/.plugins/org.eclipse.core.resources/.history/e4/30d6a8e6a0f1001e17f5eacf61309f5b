@@ -1,0 +1,157 @@
+package com.main;
+import java.util.Scanner;
+
+import com.methods.Addition;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome to Simple Calculator");
+
+        System.out.println("\nSelect operation:");
+        System.out.println("1. Addition");
+        System.out.println("2. Subtraction");
+        System.out.println("3. Multiplication");
+        System.out.println("4. Division");
+        System.out.println("5. Modulus");
+        System.out.println("6. Square");
+        System.out.println("7. Cube");
+        System.out.println("8. Average");
+        System.out.println("9. Factors");
+        System.out.println("10. Check even or odd");
+        System.out.println("11. Exit");
+
+        System.out.print("Enter your choice code: ");
+        int choice = scanner.nextInt();
+
+        switch (choice) {
+            case 1:
+            	Addition.addition();
+                break;
+            case 2:
+                performSubtraction();
+                break;
+            case 3:
+                performMultiplication();
+                break;
+            case 4:
+                performDivision();
+                break;
+            case 5:
+                performModulus();
+                break;
+            case 6:
+                performSquare();
+                break;
+            case 7:
+                performCube();
+                break;
+            case 8:
+                performAverage();
+                break;
+            case 9:
+                performFactors();
+                break;
+            case 10:
+                checkEvenOrOdd();
+                break;
+            case 11:
+                System.out.println("Thank you for using Simple Calculator. Exiting...");
+                break;
+            default:
+                System.out.println("Invalid choice. Please select a valid operation.");
+        }
+    }
+
+    
+
+    private static void performSubtraction() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the first number: ");
+        double num1 = scanner.nextDouble();
+        System.out.print("Enter the second number: ");
+        double num2 = scanner.nextDouble();
+        System.out.println("Subtraction is: " + (num1 - num2));
+    }
+
+    private static void performMultiplication() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the first number: ");
+        double num1 = scanner.nextDouble();
+        System.out.print("Enter the second number: ");
+        double num2 = scanner.nextDouble();
+        System.out.println("Multiplication is: " + (num1 * num2));
+    }
+
+    private static void performDivision() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter dividend: ");
+        double dividend = scanner.nextDouble();
+        System.out.print("Enter divisor: ");
+        double divisor = scanner.nextDouble();
+        if (divisor == 0) {
+            System.out.println("Error: Cannot divide by zero.");
+        } else {
+            System.out.println("Division is: " + (dividend / divisor));
+        }
+    }
+
+    private static void performModulus() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt();
+        System.out.println("Modulus is: " + (num1 % num2));
+    }
+
+    private static void performSquare() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        double num = scanner.nextDouble();
+        System.out.println("Square is: " + (num * num));
+    }
+
+    private static void performCube() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        double num = scanner.nextDouble();
+        System.out.println("Cube is: " + (num * num * num));
+    }
+
+    private static void performAverage() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter count of numbers: ");
+        int count = scanner.nextInt();
+        double sum = 0;
+        for (int i = 0; i < count; i++) {
+            System.out.print("Enter number " + (i + 1) + ": ");
+            sum += scanner.nextDouble();
+        }
+        System.out.println("Average is: " + (sum / count));
+    }
+
+    private static void performFactors() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int num = scanner.nextInt();
+        System.out.print("Factors of " + num + " are: ");
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+
+    private static void checkEvenOrOdd() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int num = scanner.nextInt();
+        if (num % 2 == 0) {
+            System.out.println(num + " is even.");
+        } else {
+            System.out.println(num + " is odd.");
+        }
+    }
+
+}

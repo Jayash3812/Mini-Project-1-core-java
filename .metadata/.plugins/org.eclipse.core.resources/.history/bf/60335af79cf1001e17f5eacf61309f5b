@@ -1,0 +1,11 @@
+package com.interfaces;
+
+public interface Methods {
+
+	int singleInput();
+	
+	int doubleInput();
+
+	int singleInput(int num2, int num1);
+
+}

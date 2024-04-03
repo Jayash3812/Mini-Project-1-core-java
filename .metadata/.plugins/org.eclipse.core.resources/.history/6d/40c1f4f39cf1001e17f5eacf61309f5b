@@ -1,0 +1,25 @@
+package com.main;
+
+import com.interfaces.Methods;
+
+public class Main implements Methods{
+
+	@Override
+	public int singleInput(int num2, int num1) {
+		int calculate = num1  + num2;
+		return 0;
+	}
+
+	@Override
+	public int doubleInput() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int singleInput() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
